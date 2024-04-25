@@ -1,5 +1,7 @@
 import React from 'react';
-import SubjectList from './SubjectList'; // Removed curly braces
+import SubjectList from './SubjectList'; // Curly braces removed
+import Counter from './Counter';
+import TempConverter from './TempConverter';
 
 const CMSCSubjects = [
   { code: "CMSC100", description: "Web Programming", id: 1 },
@@ -7,13 +9,21 @@ const CMSCSubjects = [
   { code: "CMSC22", description: "Object-Oriented Programming", id: 3 },
 ];
 
+const CHEMSubjects = [
+  { code: "CHEM100", description: "Introduction to Organic Chemistry", id: 1 },
+  { code: "CHEM10", description: "Chemical Kinetics", id: 2 },
+  { code: "CHEM11", description: "Introduction to Biochemistry", id: 3 },
+];
 
 function App() {
   return (
     <div>
-      <SubjectList data={CMSCSubjects} title={'Computer Science'} /> {/* Changed title */}
+      <SubjectList data={CMSCSubjects} title={'Computer Science'} />
+      <SubjectList data={CHEMSubjects} title={'Chemistry'} />
+      <Counter val={10} />
+      <TempConverter />
     </div>
   );
 }
 
-export default App;
+export default App; // Exporting App as default
